@@ -68,6 +68,8 @@ Connect a switch between GPIO 5 and GND to switch HID/Mass Storage without replu
 
 Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
 
+Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/tree/master)
+
 ⚙️ Highlights
 Advanced Scripting: DuckyScript with variables, logic, comments, blocks, random/gen functions, imports, and more
 
@@ -76,6 +78,39 @@ Keyboard Layouts: US, FR, DE, and more—easily extend or create your own
 Debug & Development: Serial monitor output, debug messages with PRINT, and importable payload chains
 
 Works Everywhere: Windows, Linux, macOS; wireless on supported hardware
+
+## 🖥️ Accessing the Serial Monitor
+
+🔧 For Linux Users:
+
+You can use picocom to access the serial monitor. Install it using your package manager, then run the following command:
+```
+while true; do if [ -e /dev/ttyACM0 ]; then picocom -b 9600 /dev/ttyACM0; fi; sleep 1; done
+```
+
+ℹ️ This command continuously checks for /dev/ttyACM0 and connects when available.
+
+You'll see ongoing output in the terminal.
+
+PRINT messages are color-coded for easier readability.
+
+This works in both Storage Device Mode and HID Mode.
+
+## 🪟 For Windows Users:
+
+You can use PuTTY to access the serial monitor.
+
+ 1. Connect your device via USB.
+
+ 2. Open the app (PuTTY or Tera Term).
+
+ 3. Choose Serial as the connection type.
+
+ 4. Set the COM port (e.g., COM3) and baud rate to 9600.
+
+ 5. Start the session to begin viewing output.
+
+💡 Tip: You can find your device's COM port in Device Manager under Ports (COM & LPT).
 
 📖 Example Payload
 ```
@@ -165,6 +200,9 @@ This is a traditional Ducky block comment
 Both styles are supported
 END_REM
 ```
+## You can also Compile your written scripts on
+
+[Compiler](https://nikhilmunda.github.io/)
 
 ## FOR MORE INFO ABOUT PAYLOADS AND SCRIPTS VISIT 
 
