@@ -1,4 +1,4 @@
-🦆 OverQuack-Remastered
+## 🦆 OverQuack-Remastered
 OverQuack-Remastered is a feature-rich, Rubber Ducky-style HID attack tool for the Raspberry Pi Pico family, supporting wireless payloads, mouse and keyboard injection, cross-platform compatibility, and fully customizable scripting and configuration.
 
 ## 🫡 Acknowledgments
