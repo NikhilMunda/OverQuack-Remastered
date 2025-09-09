@@ -69,7 +69,7 @@ Connect a switch between GPIO 5 and GND to switch HID/Mass Storage without replu
 
 Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
 
-Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/tree/master)
+Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
 
 ⚙️ Highlights
 Advanced Scripting: DuckyScript with variables, logic, comments, blocks, random/gen functions, imports, and more
