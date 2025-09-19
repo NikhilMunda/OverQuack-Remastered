@@ -57,6 +57,8 @@ Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_
   ```
 </details>
 
+⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/conig later.
+
 copy all content of OverQuack_src to CIRCUITPY
 
 Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
@@ -64,6 +66,8 @@ Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
 ## Toggle mode:
 
 Connect a switch between GPIO 5 and GND to switch HID/Mass Storage without replugging
+
+OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wire to switch Mass Storage
 
 ## Wireless control:
 
