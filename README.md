@@ -38,7 +38,7 @@ Edit config.json for board settings, Wi-Fi/AP, payloads, and pins
 
 ## 📱 setup it manually
 
-Download repo: [https://github.com/NikhilMunda/OverQuack](https://github.com/NikhilMunda/OverQuack-Remastered.)
+Download repo: [HERE](https://github.com/NikhilMunda/OverQuack-Remastered)
 
 Plug your Pico into USB while holding the BOOTSEL button for 3 seconds, then release it. It will show up as "RPI-RP2".
 
