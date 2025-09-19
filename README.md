@@ -57,7 +57,7 @@ Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_
   ```
 </details>
 
-⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/conig later.
+⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/config later.
 
 copy all content of OverQuack_src to CIRCUITPY
 
