@@ -15,7 +15,7 @@ Wireless payloads: Upload, execute, and manage scripts remotely via Wi-Fi (Pico 
 
 Plug & Play: Automatic Mass Storage ↔ HID switching (toggle via GPIO pin)
 
-Cross-platform payloads: Supports Windows, Mac, and Linux
+Cross-platform payloads: Supports Windows, Mac, and Linux, Android
 
 Mouse & Keyboard injection: Precise mouse move/click/jiggle and full keyboard control
 
@@ -74,6 +74,8 @@ OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wi
 Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
 
 Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
+
+<img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/1787ea3c-95b4-42b6-9333-24481db67266" /> <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/5e2ca8f1-64f1-40b3-ac2c-3d27b8938996" />
 
 ⚙️ Highlights
 Advanced Scripting: DuckyScript with variables, logic, comments, blocks, random/gen functions, imports, and more
@@ -257,7 +259,6 @@ WHILE ($INDEX < $MAX)
 
 END_WHILE
 CheckValue()
-
 ```
 
 ## You can also Compile your written scripts on
