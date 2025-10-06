@@ -1,11 +1,12 @@
-🦆 OverQuack-Remastered
+## 🦆 OverQuack-Remastered
 OverQuack-Remastered is a feature-rich, Rubber Ducky-style HID attack tool for the Raspberry Pi Pico family, supporting wireless payloads, mouse and keyboard injection, cross-platform compatibility, and fully customizable scripting and configuration.
 
 ## 🫡 Acknowledgments
 
-This REMASTERED is inspired from [VexilonHacker](https://github.com/VexilonHacker/OverQuack) and [dbisu](https://github.com/dbisu/pico-ducky). I liked their project so I thought on tweaking and fixing some of their Codes. I love Raspberry Pico W 💕 how well it worked with OverQuack code.
+This is the REMASTERED version of [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack) and some [dbisu/pico-ducky](https://github.com/dbisu/pico-ducky). I liked their project so I thought on tweaking and fixing some of the Codes. I love Raspberry Pico W 💕 how well it worked with OverQuack code.
 
-🚀 Features
+## 🚀 Features
+
 Full DuckyScript 3.0 support: Includes custom variables, functions, logic, and advanced blocks
 
 All Pico variants: Works with Pico, Pico W, Pico 2, Pico 2 W
@@ -37,7 +38,7 @@ Edit config.json for board settings, Wi-Fi/AP, payloads, and pins
 
 ## 📱 setup it manually
 
-Download repo: [https://github.com/NikhilMunda/OverQuack](https://github.com/NikhilMunda/OverQuack-Remastered.)
+Download repo: [HERE](https://github.com/NikhilMunda/OverQuack-Remastered/archive/refs/heads/main.zip)
 
 Plug your Pico into USB while holding the BOOTSEL button for 3 seconds, then release it. It will show up as "RPI-RP2".
 
@@ -56,6 +57,8 @@ Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_
   ```
 </details>
 
+⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/config later.
+
 copy all content of OverQuack_src to CIRCUITPY
 
 Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
@@ -64,9 +67,13 @@ Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
 
 Connect a switch between GPIO 5 and GND to switch HID/Mass Storage without replugging
 
+OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wire to switch Mass Storage
+
 ## Wireless control:
 
 Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
+
+Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
 
 ⚙️ Highlights
 Advanced Scripting: DuckyScript with variables, logic, comments, blocks, random/gen functions, imports, and more
@@ -76,6 +83,39 @@ Keyboard Layouts: US, FR, DE, and more—easily extend or create your own
 Debug & Development: Serial monitor output, debug messages with PRINT, and importable payload chains
 
 Works Everywhere: Windows, Linux, macOS; wireless on supported hardware
+
+## 🖥️ Accessing the Serial Monitor
+
+🔧 For Linux Users:
+
+You can use picocom to access the serial monitor. Install it using your package manager, then run the following command:
+```
+while true; do if [ -e /dev/ttyACM0 ]; then picocom -b 9600 /dev/ttyACM0; fi; sleep 1; done
+```
+
+ℹ️ This command continuously checks for /dev/ttyACM0 and connects when available.
+
+You'll see ongoing output in the terminal.
+
+PRINT messages are color-coded for easier readability.
+
+This works in both Storage Device Mode and HID Mode.
+
+## 🪟 For Windows Users:
+
+You can use PuTTY to access the serial monitor.
+
+ 1. Connect your device via USB.
+
+ 2. Open the app (PuTTY or Tera Term).
+
+ 3. Choose Serial as the connection type.
+
+ 4. Set the COM port (e.g., COM3) and baud rate to 9600.
+
+ 5. Start the session to begin viewing output.
+
+💡 Tip: You can find your device's COM port in Device Manager under Ports (COM & LPT).
 
 📖 Example Payload
 ```
@@ -165,10 +205,13 @@ This is a traditional Ducky block comment
 Both styles are supported
 END_REM
 ```
+## You can also Compile your written scripts on
+
+[Compiler](https://nikhilmunda.github.io/)
 
 ## FOR MORE INFO ABOUT PAYLOADS AND SCRIPTS VISIT 
 
-[VexilonHacker](https://github.com/VexilonHacker/OverQuack)
+[VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack)
 
 ## 🛡️ Disclaimer
 
