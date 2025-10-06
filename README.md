@@ -205,6 +205,61 @@ This is a traditional Ducky block comment
 Both styles are supported
 END_REM
 ```
+📖 Example 3 Now Suppports Complex Nesting:
+```
+REM payload.oqs
+
+DEFINE @sleep 1000 
+
+$username = "ADMIN"
+$MAX = 5
+$INDEX = 0 
+$CAPSLOCK_DETECTED = 0 
+
+FUNCTION OPEN_POWERSHELL()
+    DELAY @sleep
+    GUI r 
+    // math operation also supported
+    // sleep for 1000 - 200 = 800 ms
+    DELAY @sleep - 200 
+    STRING powershell 
+    SHIFT ENTER
+    DELAY 1500 
+    ENTER
+    STRINGLN 
+    echo "Heloo $username"
+    echo "what wonderfull day "
+    echo "to play ULTRAKILL"
+    END_STRINGLN
+END_FUNCTION
+
+FUNCTION CheckValue()
+    IF $CAPSLOCK_DETECTED == 1
+        STRINGLN echo "dont outsmart me =}"
+    ELSE 
+        STRINGLN echo "Good person"
+    END_IF
+END_FUNCTION
+
+OPEN_POWERSHELL()
+WHILE ($INDEX < $MAX)
+    $INDEX = $INDEX + 1 
+    $MSG = "$INDEX) From OverQuack =}"
+    IF $_CAPSLOCK_ON  == 1 
+        // indentation is not necessary, just for better readability
+        // Clicking on CAPSLOCK button to turn it off 
+        CAPSLOCK 
+    ELSE
+        STRINGLN echo "Caps Lock is turned off"
+
+    STRINGLN echo "$MSG"
+    END_IF
+
+END_WHILE
+CheckValue()
+
+```
+
 ## You can also Compile your written scripts on
 
 [Compiler](https://nikhilmunda.github.io/)
