@@ -54,7 +54,9 @@ MOUSE_MOVE with coordinates
 
 MOUSE_SCROLL with direction
 
-JIGGLE_MOUSE and BACKGROUND_JIGGLE_MOUSE with asyncio support
+JIGGLE_MOUSE and BACKGROUND_JIGGLE_MOUSE support
+
+For more INFO [Visit](https://github.com/VexilonHacker/OverQuack?tab=readme-ov-file#%EF%B8%8F-mouse-control-support)
 
 ✅ Advanced Key Management
 HOLD and RELEASE commands for individual keys
