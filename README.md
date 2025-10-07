@@ -165,9 +165,9 @@ OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wi
 
 ## Wireless control:
 
-Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
+Run and manage payloads from another device with OverQuack_client.go in linux (Pico W/2W only)
 
-Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
+And Now, Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
 
 <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/1787ea3c-95b4-42b6-9333-24481db67266" /> <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/5e2ca8f1-64f1-40b3-ac2c-3d27b8938996" />
 
