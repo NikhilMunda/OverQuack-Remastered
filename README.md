@@ -15,7 +15,7 @@ Wireless payloads: Upload, execute, and manage scripts remotely via Wi-Fi (Pico 
 
 Plug & Play: Automatic Mass Storage ↔ HID switching (toggle via GPIO pin)
 
-Cross-platform payloads: Supports Windows, Mac, and Linux
+Cross-platform payloads: Supports Windows, Mac, and Linux, Android
 
 Mouse & Keyboard injection: Precise mouse move/click/jiggle and full keyboard control
 
@@ -74,6 +74,8 @@ OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wi
 Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
 
 Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
+
+<img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/1787ea3c-95b4-42b6-9333-24481db67266" /> <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/5e2ca8f1-64f1-40b3-ac2c-3d27b8938996" />
 
 ⚙️ Highlights
 Advanced Scripting: DuckyScript with variables, logic, comments, blocks, random/gen functions, imports, and more
@@ -205,6 +207,60 @@ This is a traditional Ducky block comment
 Both styles are supported
 END_REM
 ```
+📖 Example 3 Now Suppports Complex Nesting:
+```
+REM payload.oqs
+
+DEFINE @sleep 1000 
+
+$username = "ADMIN"
+$MAX = 5
+$INDEX = 0 
+$CAPSLOCK_DETECTED = 0 
+
+FUNCTION OPEN_POWERSHELL()
+    DELAY @sleep
+    GUI r 
+    // math operation also supported
+    // sleep for 1000 - 200 = 800 ms
+    DELAY @sleep - 200 
+    STRING powershell 
+    SHIFT ENTER
+    DELAY 1500 
+    ENTER
+    STRINGLN 
+    echo "Heloo $username"
+    echo "what wonderfull day "
+    echo "to play ULTRAKILL"
+    END_STRINGLN
+END_FUNCTION
+
+FUNCTION CheckValue()
+    IF $CAPSLOCK_DETECTED == 1
+        STRINGLN echo "dont outsmart me =}"
+    ELSE 
+        STRINGLN echo "Good person"
+    END_IF
+END_FUNCTION
+
+OPEN_POWERSHELL()
+WHILE ($INDEX < $MAX)
+    $INDEX = $INDEX + 1 
+    $MSG = "$INDEX) From OverQuack =}"
+    IF $_CAPSLOCK_ON  == 1 
+        // indentation is not necessary, just for better readability
+        // Clicking on CAPSLOCK button to turn it off 
+        CAPSLOCK 
+    ELSE
+        STRINGLN echo "Caps Lock is turned off"
+
+    STRINGLN echo "$MSG"
+    END_IF
+
+END_WHILE
+CheckValue()
+```
+
 ## You can also Compile your written scripts on
 
 [Compiler](https://nikhilmunda.github.io/)
