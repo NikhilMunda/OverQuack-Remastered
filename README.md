@@ -68,6 +68,33 @@ REPEAT command with LINES= and TIMES= syntax
 
 SELECT_LAYOUT for keyboard layout switching
 
+```
+SUPPORTED_LAYOUTS = {
+    "US_DVO",
+    "US",
+    "MAC_FR",
+    "WIN_BR",
+    "WIN_CZ",
+    "WIN_CZ1",
+    "WIN_DA",
+    "WIN_DE",
+    "WIN_ES",
+    "WIN_FR",
+    "WIN_HU",
+    "WIN_IT",
+    "WIN_PO",
+    "WIN_SW",
+    "WIN_TR",
+    "WIN_UK",
+}
+```
+## 🔤 Layout Selection
+To change the keyboard layout, use the SELECT_LAYOUT command:
+
+```
+SELECT_LAYOUT WIN_FR  # Switch to French layout on Windows
+```
+
 RESTART_PAYLOAD and STOP_PAYLOAD commands
 
 IMPORT script functionality
