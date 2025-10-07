@@ -23,7 +23,74 @@ Modular and extensible: Easy script imports, custom layouts, and debugging via s
 
 Easy configuration: All settings adjustable with config.json
 
-Open source, GPLv2.0
+## :wrench: UPDATE v 1.0
+The Update version now includes:
+
+✅ Core Execution System
+Complete executeNestedCode function with proper recursion handling
+
+Memory management with garbage collection
+
+✅ Advanced Control Structures
+IF/ELSE_IF/END_IF with proper condition evaluation and nesting support
+
+FUNCTION/END_FUNCTION definition and execution with nested support
+
+WHILE/END_WHILE loops with iteration limits and nesting support
+
+✅ Enhanced String Handling
+STRING_BLOCK/END_STRING for multi-line string output
+
+STRINGLN_BLOCK/END_STRINGLN for multi-line string with newlines
+
+DISABLE_STRIP/ENABLE_STRIP formatting control
+
+✅ Complete Mouse Support
+MOUSE_CLICK (LEFT/RIGHT/MIDDLE)
+
+MOUSE_PRESS and MOUSE_RELEASE
+
+MOUSE_MOVE with coordinates
+
+MOUSE_SCROLL with direction
+
+JIGGLE_MOUSE and BACKGROUND_JIGGLE_MOUSE with asyncio support
+
+✅ Advanced Key Management
+HOLD and RELEASE commands for individual keys
+
+RELEASE_ALL for clearing all pressed keys
+
+Proper key state management
+
+✅ Script Control Features
+REPEAT command with LINES= and TIMES= syntax
+
+SELECT_LAYOUT for keyboard layout switching
+
+RESTART_PAYLOAD and STOP_PAYLOAD commands
+
+IMPORT script functionality
+
+✅ Enhanced Variable System
+Fixed random variable replacement with proper regex parsing
+
+Safe expression evaluation (replacing dangerous eval with safe_eval)
+
+Comprehensive variable and define replacement
+
+Internal variables for system state
+
+✅ Debugging and Output
+BetterListOutput function for formatted debugging
+
+Color-coded console output system
+
+Comprehensive error messages and status reporting
+
+PRINT command for script output
+
+## Open source, GPLv2.0
 
 ## 📦 Quick Start
 Clone the repo:
@@ -211,54 +278,43 @@ END_REM
 ```
 REM payload.oqs
 
-DEFINE @sleep 1000 
+DEFINE @waqt 1000 
 
-$username = "ADMIN"
-$MAX = 5
-$INDEX = 0 
-$CAPSLOCK_DETECTED = 0 
+DEFAULT_DELAY = 1000
 
-FUNCTION OPEN_POWERSHELL()
-    DELAY @sleep
+$username = "NIKHIL"
+
+FUNCTION OPEN_NOTEPAD()
+    DELAY @waqt
     GUI r 
-    // math operation also supported
-    // sleep for 1000 - 200 = 800 ms
-    DELAY @sleep - 200 
-    STRING powershell 
+    // supports math operation
+    DELAY @waqt - 200 
+    STRING notepad 
     SHIFT ENTER
     DELAY 1500 
     ENTER
-    STRINGLN 
-    echo "Heloo $username"
-    echo "what wonderfull day "
-    echo "to play ULTRAKILL"
+    STRINGLN_BLOCK
+    Jinki manzil ek hoti hai ... woh raaston par hi toh milte hai
     END_STRINGLN
 END_FUNCTION
 
-FUNCTION CheckValue()
-    IF $CAPSLOCK_DETECTED == 1
-        STRINGLN echo "dont outsmart me =}"
-    ELSE 
-        STRINGLN echo "Good person"
-    END_IF
-END_FUNCTION
+OPEN_NOTEPAD()
 
-OPEN_POWERSHELL()
-WHILE ($INDEX < $MAX)
-    $INDEX = $INDEX + 1 
-    $MSG = "$INDEX) From OverQuack =}"
-    IF $_CAPSLOCK_ON  == 1 
-        // indentation is not necessary, just for better readability
-        // Clicking on CAPSLOCK button to turn it off 
-        CAPSLOCK 
-    ELSE
-        STRINGLN echo "Caps Lock is turned off"
+$A = 35
 
-    STRINGLN echo "$MSG"
+WHILE $A>0
+    IF ($A > 25)
+       IF ($A<30)
+         STRINGLN $A is LESS THAN 30
+       ELSE_IF ($A < 25)
+         STRINGLN $A is LESS THAN 20
+       ELSE
+         BREAK
     END_IF
 
+$A = $A-1
 END_WHILE
-CheckValue()
+
 ```
 
 ## You can also Compile your written scripts on
