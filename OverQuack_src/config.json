@@ -17,7 +17,7 @@
         "desc_channel" : "You can set random channel  value by using RANDOM or specify channel value as int in range [1,13]",
         "ip_address": "10.10.5.1",
         "ports": [80, 8000, 8080],
-        "desc_ports" : "at least you should put 2 ports, adding 80, 8000, 8080 showing ERROR ports already in use so you can try other ports if you want"
+        "desc_ports" : "at least you should put 2 ports, you can use those in emergency if you want"
     }
 }
 
