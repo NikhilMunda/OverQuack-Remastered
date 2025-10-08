@@ -305,8 +305,6 @@ END_REM
 ```
 📖 Example 3 Now Suppports Complex Nesting:
 ```
-REM payload.oqs
-
 DEFINE @waqt 1000 
 
 DEFAULT_DELAY = 1000
@@ -343,7 +341,6 @@ WHILE $A>0
 
 $A = $A-1
 END_WHILE
-
 ```
 
 ## You can also Compile your written scripts on
