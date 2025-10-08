@@ -8,7 +8,7 @@
 # Custom Edit to fix all the issues: OverQuack
 # Copyright (c) 2025 NikhilMunda
 # REMASTERED by 2025 NikhilMunda
-# FIXED VERSION with all bug fixes applied
+# FIXED VERSION with all bug fixes applied: NikhilMunda
 
 import asyncio
 import re
@@ -380,6 +380,39 @@ def replaceDefines(line):
     for define, value in defines.items():
         line = line.replace(define, str(value))
     return line
+
+
+def SelectLayout(layout_key):
+    """Fixed: Layout selection function"""
+    global KeyboardLayout, Keycode, layout
+
+    layout_key = layout_key.upper()
+    layout_entry = LAYOUTS_MAP.get(layout_key)
+    print_with_color(f"LAYOUT_KEY: {layout_key}, LAYOUT_ENTRY: {layout_entry}", STEEL_BLUE)
+
+    if not layout_entry:
+        print(f"[INVALID_LAYOUT] {layout_key}")
+        return None, None
+
+    # import layout module
+    layout_module_path = layout_entry[0]
+    layout_module = __import__(layout_module_path)
+    for part in layout_module_path.split(".")[1:]:
+        layout_module = getattr(layout_module, part)
+
+    # import keycode module
+    keycode_module_path = layout_entry[1]
+    keycode_module = __import__(keycode_module_path)
+    for part in keycode_module_path.split(".")[1:]:
+        keycode_module = getattr(keycode_module, part)
+
+    # access class objects
+    KeyboardLayoutClass = getattr(layout_module, "KeyboardLayout")
+    KeycodeClass = getattr(keycode_module, "Keycode")
+
+    return KeyboardLayoutClass, KeycodeClass
+
+
 
 def replaceVariables(line):
     """Replace variables in line"""
@@ -814,6 +847,24 @@ def parseLine(line, script_lines):
             except OSError:
                 print_with_color(f"Cannot import script: {imported_script}", RED)
         return script_lines
+
+    # Payload control commands
+    if line.startswith("RESTART_PAYLOAD"):
+        # This will be handled at a higher level in runScript
+        return script_lines
+
+    if line.startswith("STOP_PAYLOAD"):
+        # This will be handled at a higher level in runScript
+        return script_lines
+
+    # Function execution
+    if line in functions:
+        print_with_color(f"FUNCTION_EXECUTION: {line}, Content: {BetterListOutput(functions[line])}", BRIGHT_GREEN)
+        # FIXED: Use executeNestedCode instead of executeNonRecursive
+        executeNestedCode(functions[line], f"FUNCTION_{line}")
+        gc.collect()
+        return script_lines    
+
 
     # Default delay
     if line.startswith("DEFAULT_DELAY") or line.startswith("DEFAULTDELAY"):
