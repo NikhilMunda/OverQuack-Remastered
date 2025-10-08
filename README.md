@@ -309,8 +309,6 @@ DEFINE @waqt 1000
 
 DEFAULT_DELAY = 1000
 
-$username = "ADMIN"
-
 FUNCTION OPEN_NOTEPAD()
     DELAY @waqt
     GUI r 
