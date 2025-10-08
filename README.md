@@ -23,7 +23,103 @@ Modular and extensible: Easy script imports, custom layouts, and debugging via s
 
 Easy configuration: All settings adjustable with config.json
 
-Open source, GPLv2.0
+## :wrench: UPDATE v 1.0
+The Update version now includes:
+
+✅ Core Execution System
+Complete executeNestedCode function with proper recursion handling
+
+Memory management with garbage collection
+
+✅ Advanced Control Structures
+IF/ELSE_IF/END_IF with proper condition evaluation and nesting support
+
+FUNCTION/END_FUNCTION definition and execution with nested support
+
+WHILE/END_WHILE loops with iteration limits and nesting support
+
+✅ Enhanced String Handling
+STRING_BLOCK/END_STRING for multi-line string output
+
+STRINGLN_BLOCK/END_STRINGLN for multi-line string with newlines
+
+DISABLE_STRIP/ENABLE_STRIP formatting control
+
+✅ Complete Mouse Support
+MOUSE_CLICK (LEFT/RIGHT/MIDDLE)
+
+MOUSE_PRESS and MOUSE_RELEASE
+
+MOUSE_MOVE with coordinates
+
+MOUSE_SCROLL with direction
+
+JIGGLE_MOUSE and BACKGROUND_JIGGLE_MOUSE support
+
+For more INFO [Visit](https://github.com/VexilonHacker/OverQuack?tab=readme-ov-file#%EF%B8%8F-mouse-control-support)
+
+✅ Advanced Key Management
+HOLD and RELEASE commands for individual keys
+
+RELEASE_ALL for clearing all pressed keys
+
+Proper key state management
+
+✅ Script Control Features
+REPEAT command with LINES= and TIMES= syntax
+
+SELECT_LAYOUT for keyboard layout switching
+
+```
+SUPPORTED_LAYOUTS = {
+    "US_DVO",
+    "US",
+    "MAC_FR",
+    "WIN_BR",
+    "WIN_CZ",
+    "WIN_CZ1",
+    "WIN_DA",
+    "WIN_DE",
+    "WIN_ES",
+    "WIN_FR",
+    "WIN_HU",
+    "WIN_IT",
+    "WIN_PO",
+    "WIN_SW",
+    "WIN_TR",
+    "WIN_UK",
+}
+```
+## 🔤 Layout Selection
+To change the keyboard layout, use the SELECT_LAYOUT command:
+
+```
+SELECT_LAYOUT WIN_FR  # Switch to French layout on Windows
+```
+
+RESTART_PAYLOAD and STOP_PAYLOAD commands
+
+IMPORT script functionality
+
+✅ Enhanced Variable System
+Fixed random variable replacement with proper regex parsing
+
+Safe expression evaluation (replacing dangerous eval with safe_eval)
+
+Comprehensive variable and define replacement
+
+Internal variables for system state
+
+✅ Debugging and Output
+BetterListOutput function for formatted debugging
+
+Color-coded console output system
+
+Comprehensive error messages and status reporting
+
+PRINT command for script output
+
+## Open source, GPLv2.0
 
 ## 📦 Quick Start
 Clone the repo:
@@ -71,9 +167,9 @@ OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wi
 
 ## Wireless control:
 
-Run and manage payloads from another device with OverQuack_client.go (Pico W/2W only)
+Run and manage payloads from another device with OverQuack_client.go in linux (Pico W/2W only)
 
-Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/)
+And Now, Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/releases)
 
 <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/1787ea3c-95b4-42b6-9333-24481db67266" /> <img width="240" height="540" alt="image" src="https://github.com/user-attachments/assets/5e2ca8f1-64f1-40b3-ac2c-3d27b8938996" />
 
@@ -211,54 +307,43 @@ END_REM
 ```
 REM payload.oqs
 
-DEFINE @sleep 1000 
+DEFINE @waqt 1000 
+
+DEFAULT_DELAY = 1000
 
 $username = "ADMIN"
-$MAX = 5
-$INDEX = 0 
-$CAPSLOCK_DETECTED = 0 
 
-FUNCTION OPEN_POWERSHELL()
-    DELAY @sleep
+FUNCTION OPEN_NOTEPAD()
+    DELAY @waqt
     GUI r 
-    // math operation also supported
-    // sleep for 1000 - 200 = 800 ms
-    DELAY @sleep - 200 
-    STRING powershell 
+    // supports math operation
+    DELAY @waqt - 200 
+    STRING notepad 
     SHIFT ENTER
     DELAY 1500 
     ENTER
-    STRINGLN 
-    echo "Heloo $username"
-    echo "what wonderfull day "
-    echo "to play ULTRAKILL"
+    STRINGLN_BLOCK
+    Jinki manzil ek hoti hai ... woh raaston par hi toh milte hai
     END_STRINGLN
 END_FUNCTION
 
-FUNCTION CheckValue()
-    IF $CAPSLOCK_DETECTED == 1
-        STRINGLN echo "dont outsmart me =}"
-    ELSE 
-        STRINGLN echo "Good person"
-    END_IF
-END_FUNCTION
+OPEN_NOTEPAD()
 
-OPEN_POWERSHELL()
-WHILE ($INDEX < $MAX)
-    $INDEX = $INDEX + 1 
-    $MSG = "$INDEX) From OverQuack =}"
-    IF $_CAPSLOCK_ON  == 1 
-        // indentation is not necessary, just for better readability
-        // Clicking on CAPSLOCK button to turn it off 
-        CAPSLOCK 
-    ELSE
-        STRINGLN echo "Caps Lock is turned off"
+$A = 35
 
-    STRINGLN echo "$MSG"
+WHILE $A>0
+    IF ($A > 25)
+       IF ($A<30)
+         STRINGLN $A is LESS THAN 30
+       ELSE_IF ($A < 25)
+         STRINGLN $A is LESS THAN 20
+       ELSE
+         BREAK
     END_IF
 
+$A = $A-1
 END_WHILE
-CheckValue()
+
 ```
 
 ## You can also Compile your written scripts on
