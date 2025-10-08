@@ -7,6 +7,7 @@
 # Original Project name : OverQuack
 # Custom Edit to fix all the issues: OverQuack
 # Copyright (c) 2025 NikhilMunda
+# REMASTERED by 2025 NikhilMunda
 # FIXED VERSION with all bug fixes applied
 
 import asyncio
