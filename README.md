@@ -443,6 +443,12 @@ Online Enhanced [Compiler](https://nikhilmunda.github.io/)
 
 [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack)
 
+
+## 📜 License
+
+Distributed under the **GPLv2.0 License**. See [LICENSE](https://github.com/NikhilMunda/nikhilmunda.github.io/blob/main/LICENSE) for more information.
+
+
 ## 🛡️ Disclaimer
 
 For authorized testing and education only. Never use on systems you do not own or have clear written permission to test. The authors take no responsibility for misuse or damage.
