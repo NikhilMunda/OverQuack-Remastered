@@ -237,7 +237,7 @@ OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wi
 🔁 No need to unplug the USB or manually replug the device after flipping the switch — simply toggle the switch, and OverQuack will automatically reboot into the selected mode.
 
 
-## Wireless control:
+## 🛜 Wireless control:
 
 Run and manage payloads from another device with OverQuack_client.go clients available for both linux and windows. For (Pico W/2W only)
 
