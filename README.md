@@ -3,7 +3,7 @@ OverQuack-Remastered is a feature-rich, Rubber Ducky-style HID attack tool for t
 
 ## 🫡 Acknowledgments
 
-This is the REMASTERED version of [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack) and some [dbisu/pico-ducky](https://github.com/dbisu/pico-ducky). I liked their project so I thought on tweaking and fixing the Codes. I love Raspberry Pico W 💕 how well it worked with OverQuack code.
+This is the REMASTERED version of [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack) and some [dbisu/pico-ducky](https://github.com/dbisu/pico-ducky). I liked their work and project so much that I thought on tweaking and fixing the Codes. I love Raspberry Pico W 💕 how well it worked with OverQuack code.
 
 ## 🚀 Features
 
