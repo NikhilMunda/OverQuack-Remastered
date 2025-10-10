@@ -146,10 +146,10 @@ Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_
   <summary>Available firmwares</summary>
   
   ```
-  -adafruit-circuitpython-raspberry_pi_pico-en_US-9.2.1.uf2
-  -adafruit-circuitpython-raspberry_pi_pico2-en_US-9.2.1.uf2
-  -adafruit-circuitpython-raspberry_pi_pico2_w-en_US-9.2.1.uf2
-  -adafruit-circuitpython-raspberry_pi_pico_w-en_US-9.2.8.uf2
+  -adafruit-circuitpython-raspberry_pi_pico-en_US-9.2.9.uf2
+  -adafruit-circuitpython-raspberry_pi_pico2-en_US-9.2.9.uf2
+  -adafruit-circuitpython-raspberry_pi_pico2_w-en_US-9.2.9.uf2
+  -adafruit-circuitpython-raspberry_pi_pico_w-en_US-9.2.9.uf2
   ```
 </details>
 
