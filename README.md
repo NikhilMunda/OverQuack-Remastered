@@ -26,47 +26,84 @@ Easy configuration: All settings adjustable with config.json
 ## :wrench: UPDATE v 1.0
 The Update version now includes:
 
-✅ Core Execution System
+## ✅ Core Execution System
 Complete executeNestedCode function with proper recursion handling
 
 Memory management with garbage collection
 
-✅ Advanced Control Structures
+## ✅ Advanced Control Structures
 IF/ELSE_IF/END_IF with proper condition evaluation and nesting support
 
 FUNCTION/END_FUNCTION definition and execution with nested support
 
 WHILE/END_WHILE loops with iteration limits and nesting support
 
-✅ Enhanced String Handling
+## ✅ Enhanced String Handling
 STRING_BLOCK/END_STRING for multi-line string output
 
 STRINGLN_BLOCK/END_STRINGLN for multi-line string with newlines
 
 DISABLE_STRIP/ENABLE_STRIP formatting control
 
-✅ Complete Mouse Support
-MOUSE_CLICK (LEFT/RIGHT/MIDDLE)
+## ✅ 🖱️ Mouse Control Support
+```
+MOUSE_CLICK RIGHT             # Click mouse button: LEFT / RIGHT / MIDDLE
+MOUSE_PRESS LEFT              # Press (hold down) mouse button
+MOUSE_RELEASE LEFT            # Release previously pressed mouse button
+MOUSE_MOVE 30 40              # Move mouse cursor to x=30, y=40
+MOUSE_SCROLL 6                # Scroll up 6 lines
+MOUSE_SCROLL -6               # Scroll down 6 lines
+```
+## 〰 Mouse Jiggler
+```
+JIGGLE_MOUSE 6000             # Jiggle mouse for 6000 ms
+BACKGROUND_JIGGLE_MOUSE 5000 # Jiggle mouse for 5 seconds after payload ends
+BACKGROUND_JIGGLE_MOUSE INF   # Jiggle mouse indefinitely after payload ends
+```
 
-MOUSE_PRESS and MOUSE_RELEASE
 
-MOUSE_MOVE with coordinates
-
-MOUSE_SCROLL with direction
-
-JIGGLE_MOUSE and BACKGROUND_JIGGLE_MOUSE support
 
 For more INFO [Visit](https://github.com/VexilonHacker/OverQuack?tab=readme-ov-file#%EF%B8%8F-mouse-control-support)
 
-✅ Advanced Key Management
+## ✅ Advanced Key Management
 HOLD and RELEASE commands for individual keys
 
 RELEASE_ALL for clearing all pressed keys
 
 Proper key state management
 
-✅ Script Control Features
-REPEAT command with LINES= and TIMES= syntax
+## ✅ Script Control Features
+
+🔁 REPEAT
+
+You can repeat specific lines multiple times using the REPEAT command.
+
+✅ Basic example 1:
+```
+STRINGLN echo "hello world"
+REPEAT LINES=1 TIMES=3
+```
+Result:
+
+```
+echo "hello world"
+echo "hello world"
+echo "hello world"
+```
+
+✅ Basic example 2:
+```
+STRINGLN echo "PEACE"
+STRINGLN echo "hello world"
+REPEAT LINES=2 TIMES=3
+```
+Result:
+
+```
+echo "PEACE"
+echo "PEACE"
+echo "PEACE"
+```
 
 SELECT_LAYOUT for keyboard layout switching
 
@@ -101,7 +138,7 @@ RESTART_PAYLOAD and STOP_PAYLOAD commands
 
 IMPORT script functionality
 
-✅ Enhanced Variable System
+## ✅ Enhanced Variable System
 Fixed random variable replacement with proper regex parsing
 
 Safe expression evaluation (replacing dangerous eval with safe_eval)
@@ -110,7 +147,7 @@ Comprehensive variable and define replacement
 
 Internal variables for system state
 
-✅ Debugging and Output
+## ✅ Debugging and Output
 BetterListOutput function for formatted debugging
 
 Color-coded console output system
@@ -119,8 +156,6 @@ Comprehensive error messages and status reporting
 
 PRINT command for script output
 
-## Open source, GPLv2.0
-
 ## 📦 Quick Start
 Clone the repo:
 
@@ -128,19 +163,44 @@ shell
 git clone https://github.com/NikhilMunda/OverQuack-Remastered.git
 
 
-## Configure:
+## ⚙️ Configuration:
 
 Edit config.json for board settings, Wi-Fi/AP, payloads, and pins
 
+```
+{
+    "DEFAULT_PAYLOAD" :  "payload.oqs",
+    "BOARD" : {
+        "controll_mode_pin": 5,
+        "desc_controll_mode_pin" : "Setting GPIO pin that will change from keystroke mode to storage mode as example pin 2, 6, 10, 13...",
+
+        "enable_auto_switch_mode" : true,
+        "desc_enable_auto_switch_mode" : "switch attack mode without  need to replug usb",
+
+        "enable_auto_reload" : false,
+        "desc_enable_auto_reload" : "when editing a file in PICO and saving it, it will auto reboot PICO"
+    },
+    "AP" : {
+        "ssid": "WIFI-QUACK",
+        "password": "passw1234",
+        "channel": "RANDOM",
+        "desc_channel" : "You can set random channel  value by using RANDOM or specify channel value as int in range [1,13]",
+        "ip_address": "10.10.5.1",
+        "ports": [80, 8000, 8080],
+        "desc_ports" : "at least you should put 2 ports, other ports are used in emergency"
+    }
+}
+```
+
 ## 📱 setup it manually
 
-Download repo: [HERE](https://github.com/NikhilMunda/OverQuack-Remastered/archive/refs/heads/main.zip)
+1) Download repo: [HERE](https://github.com/NikhilMunda/OverQuack-Remastered/archive/refs/heads/main.zip)
 
-Plug your Pico into USB while holding the BOOTSEL button for 3 seconds, then release it. It will show up as "RPI-RP2".
+2) Plug your Pico into USB while holding the BOOTSEL button for 3 seconds, then release it. It will show up as "RPI-RP2".
 
-Copy OverQuack_installation/firmwares/flash_nuke.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting.
+3) Copy OverQuack_installation/firmwares/flash_nuke.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting.
 
-Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_PICO_MODULE>-en_US-9.2.1.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting and it going to show up as "CIRCUITPY".
+4) Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_PICO_MODULE>-en_US-9.2.1.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting and it going to show up as "CIRCUITPY".
 
 <details>
   <summary>Available firmwares</summary>
@@ -155,19 +215,41 @@ Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_
 
 ⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/config later.
 
-copy all content of OverQuack_src to CIRCUITPY
+5) copy all content of OverQuack_src to CIRCUITPY
 
-Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
+6) Setup complete. OverQuack is ready to use. Proceed with your tasks responsibly.
 
-## Toggle mode:
+## 🔄 Toggle mode: Mass Storage ⇄ HID Keyboard
 
 Connect a switch between GPIO 5 and GND to switch HID/Mass Storage without replugging
 
 OR You can connect a wire between GPIO 5 and GND to switch HID and remove the wire to switch Mass Storage
 
+![simplified_pico_pinout](https://github.com/user-attachments/assets/443b500a-49f5-4912-8235-e995e251129a)
+
+🔁 No need to unplug the USB or manually replug the device after flipping the switch — simply toggle the switch, and OverQuack will automatically reboot into the selected mode.
+
+
 ## Wireless control:
 
-Run and manage payloads from another device with OverQuack_client.go in linux (Pico W/2W only)
+Run and manage payloads from another device with OverQuack_client.go clients available for both linux and windows. For (Pico W/2W only)
+
+## LINUX:
+<img width="840" height="566" alt="LinuxClient" src="https://github.com/user-attachments/assets/77989c35-90fa-406e-a536-8ea05ce7594f" />
+
+
+## WINDOWS:
+<img width="840" height="466" alt="WindowsCLient" src="https://github.com/user-attachments/assets/cc7e9700-5ca5-47b8-86a7-2d64e36b1f52" />
+
+✅ Available Operations:
+
+📂 List all payloads/files
+
+📥 Upload / 📤 Download payloads
+
+📝 Read / ❌ Delete payloads
+
+▶️ Run payload remotely
 
 And Now, Have support for Android App [OverQuack_Client](https://github.com/NikhilMunda/OverQuack_App/releases)
 
@@ -240,6 +322,13 @@ This demonstrates both comment styles
 Multi-line C-style comment block 
 */
 
+// HAVE SUPPORT for IMPORT to use or import other payloads from pico w
+DEFAULT_DELAY 500
+// HERE USING IMPORT WILL RUN THE BYPASSWINDOW.oqs CODE
+IMPORT BYPASSWINDOW.oqs
+
+//--------------NEXT CODE--------------------
+
 REM SUPPORT FOR IF, ELSE_IF, ELSE, END_IF
 
 VAR $number = 42
@@ -253,6 +342,8 @@ ELSE_IF ($number < 100)
 ELSE
     STRINGLN Number is very large
 END_IF
+
+//--------------NEXT CODE---------------
 
 REM Traditional Ducky comment
 VAR $username = "admin"
@@ -284,7 +375,7 @@ STRINGLN
 DELAY $FAST_TYPE
 STRING This line has a fast delay
 
-MOUSE_MOVE 100 100
+MOUSE_MOVE 100 100   //Move the cursor
 MOUSE_CLICK LEFT    // Click at position
 DELAY 500
 
@@ -343,9 +434,12 @@ END_WHILE
 
 ## You can also Compile your written scripts on
 
-[Compiler](https://nikhilmunda.github.io/)
+Online Enhanced [Compiler](https://nikhilmunda.github.io/) 
 
-## FOR MORE INFO ABOUT PAYLOADS AND SCRIPTS VISIT 
+<img width="840" height="466" alt="Screenshot 2025-10-10 102447" src="https://github.com/user-attachments/assets/e57d063a-a03f-4a4d-8a55-d61d4bfcb256" />
+
+
+## FOR MORE INFO ABOUT PAYLOADS SCRIPTS AND COMMANDS VISIT 
 
 [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack)
 
