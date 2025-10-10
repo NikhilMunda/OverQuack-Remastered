@@ -432,14 +432,14 @@ $A = $A-1
 END_WHILE
 ```
 
-## You can also Compile your written scripts on
+## 🔑 You can also Compile your written scripts on
 
 Online Enhanced [Compiler](https://nikhilmunda.github.io/) 
 
 <img width="840" height="466" alt="Screenshot 2025-10-10 102447" src="https://github.com/user-attachments/assets/e57d063a-a03f-4a4d-8a55-d61d4bfcb256" />
 
 
-## FOR MORE INFO ABOUT PAYLOADS SCRIPTS AND COMMANDS VISIT 
+## ❗ FOR MORE INFO ABOUT PAYLOADS SCRIPTS AND COMMANDS VISIT 
 
 [VexilonHacker/OverQuack](https://github.com/VexilonHacker/OverQuack)
 
