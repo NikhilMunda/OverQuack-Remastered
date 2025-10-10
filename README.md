@@ -80,29 +80,35 @@ You can repeat specific lines multiple times using the REPEAT command.
 
 ✅ Basic example 1:
 ```
-STRINGLN echo "hello world"
+PRINT "hello world"
 REPEAT LINES=1 TIMES=3
 ```
 Result:
 
 ```
-echo "hello world"
-echo "hello world"
-echo "hello world"
+"hello world"
+"hello world"
+"hello world"
 ```
 
 ✅ Basic example 2:
 ```
-STRINGLN echo "PEACE"
-STRINGLN echo "hello world"
+PRINT "PEACE"         //2nd line
+PRINT "hello world"  //1st line
 REPEAT LINES=2 TIMES=3
 ```
 Result:
 
 ```
-echo "PEACE"
-echo "PEACE"
-echo "PEACE"
+"PEACE"
+"hello world"
+//It reapeated from 2nd line 3 times
+"PEACE"     
+"hello world"
+"PEACE"
+"hello world"
+"PEACE"
+"hello world"
 ```
 ## 🔤 Layout Selection
 
