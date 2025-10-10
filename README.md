@@ -164,7 +164,7 @@ git clone https://github.com/NikhilMunda/OverQuack-Remastered.git
 
 ## ⚙️ Configuration:
 
-Edit config.json for board settings, Wi-Fi/AP, payloads, and pins
+Edit config.json for board settings, Wi-Fi/AP, payloads, and pins which can be found inside \OverQuack_src\
 
 ```
 {
