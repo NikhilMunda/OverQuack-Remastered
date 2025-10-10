@@ -214,7 +214,7 @@ Edit config.json for board settings, Wi-Fi/AP, payloads, and pins which can be f
 
 ⚠️NOTE: If you want, you can edit/config the file before going to the next step else you will not be able to edit/config later.
 
-⚠️NOTE: If you want, you can remove/delete the extra keyboadlayouts from OverQuack_src\lib Keyboard_layouts and keycodes, which doesnot seems neccesarry according to your preference.
+⚠️NOTE: If you want, you can remove/delete the extra keyboad layouts from OverQuack_src\lib\ Keyboard_layouts and keycodes, which doesnot seems neccesarry according to your preference.
 
 5) copy all content of OverQuack_src to CIRCUITPY
 
