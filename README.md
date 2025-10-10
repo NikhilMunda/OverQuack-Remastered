@@ -200,7 +200,7 @@ Edit config.json for board settings, Wi-Fi/AP, payloads, and pins
 
 3) Copy OverQuack_installation/firmwares/flash_nuke.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting.
 
-4) Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_PICO_MODULE>-en_US-9.2.1.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting and it going to show up as "CIRCUITPY".
+4) Copy OverQuack_installation/firmwares/adafruit-circuitpython-raspberry_pi_<YOUR_PICO_MODULE>-en_US-9.2.9.uf2 to the RPI-RP2 drive and wait for the Pico to finish rebooting and it going to show up as "CIRCUITPY".
 
 <details>
   <summary>Available firmwares</summary>
