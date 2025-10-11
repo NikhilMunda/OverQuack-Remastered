@@ -12,6 +12,7 @@
 
 import asyncio
 import re
+import gc
 from random import choice, randint
 from time import monotonic, sleep
 from adafruit_hid.consumer_control import ConsumerControl
