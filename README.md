@@ -161,7 +161,7 @@ Comprehensive error messages and status reporting
 
 PRINT command for script output
 
-
+---
 ## 🌟 PLEASE CONSIDER
 If you find this project useful, please consider giving it a star ⭐️. Even a small amount would motivate me to continue work on this project and do similar projects in the future. 😊
 
@@ -173,7 +173,7 @@ OR UPI app:
 
 [<img src="https://img.shields.io/badge/Donate-UPI-blue.svg?style=for-the-badge&logo=google-pay" alt="Donate via UPI">](upi://pay?pa=munda.nikhil@ybl&pn=NikhilMunda&cu=INR)
 
-
+---
 ## 📦 Quick Start
 Clone the repo:
 
