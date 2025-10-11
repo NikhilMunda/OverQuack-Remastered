@@ -76,7 +76,7 @@ Proper key state management
 
 🔁 REPEAT
 
-You can repeat specific lines multiple times using the REPEAT command.
+You can repeat specific lines multiple times using the REPEAT command. For now it doesnot work inside loop/neested loop.
 
 ✅ Basic example 1:
 ```
@@ -160,6 +160,19 @@ Color-coded console output system
 Comprehensive error messages and status reporting
 
 PRINT command for script output
+
+
+## 🌟 PLEASE CONSIDER
+If you find this project useful, please consider giving it a star ⭐️. Even a small amount would motivate me to continue work on this project and do similar projects in the future. 😊
+
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/nikhilmunda) 
+
+OR UPI app:
+
+**UPI ID:** `munda.nikhil@ybl`
+
+[<img src="https://img.shields.io/badge/Donate-UPI-blue.svg?style=for-the-badge&logo=google-pay" alt="Donate via UPI">](upi://pay?pa=munda.nikhil@ybl&pn=NikhilMunda&cu=INR)
+
 
 ## 📦 Quick Start
 Clone the repo:
