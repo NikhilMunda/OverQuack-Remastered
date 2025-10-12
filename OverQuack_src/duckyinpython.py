@@ -827,11 +827,11 @@ def parseLine(line, script_lines):
             return SafeIterator([])
 
         elif line.startswith("STRINGLN"):
-            sendString(replaceAll(line[8:]))
+            sendString(replaceAll(line[8:].strip()))
             kbd.press(Keycode.ENTER)
             kbd.release(Keycode.ENTER)
         else:
-            sendString(replaceAll(line[6:]))
+            sendString(replaceAll(line[6:].strip()))
         return script_lines
 
     # Print command
