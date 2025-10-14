@@ -76,7 +76,7 @@ Proper key state management
 
 🔁 REPEAT
 
-You can repeat specific lines multiple times using the REPEAT command. For now it doesnot work inside loop/neested loop.
+You can repeat specific lines multiple times using the REPEAT command. For now it doesnot work inside loop/nested loop.
 
 ✅ Basic example 1:
 ```
